@@ -37,12 +37,11 @@ function criarNovaTarefa() {
     novoNome.focus();
 }
 
-function filtro(){
+function filtro() {
     const novoFiltro = document.querySelector('#filtro-de-categoria');
     let listaEl = document.querySelector('#lista-tarefas');
     if (novoFiltro.value !== ""){
         Object.keys(listaEl.children).forEach(element => {
-            console.log(element)
             if (element.categoria !== novoFiltro.value){
                 element.classList.add('retido-no-filtro');
             } else {
@@ -50,6 +49,18 @@ function filtro(){
             }
         })
     }
+}
+
+function clickMarcado(e) { // opcional 5
+    if (e.classList.contains('marcado')){
+        e.classList.remove('marcado');
+    } else {
+        e.classList.add('marcado');
+    }
+}
+
+function funcaoEnter(evento){
+    console.log(evento)
 }
 
 main();

@@ -22,9 +22,9 @@
           <option value="estudos">Estudos</option>
         </select>
 
-        <button id="incluir-nova-tarefa" onclick="criarNovaTarefa()" onkeyup="funcãoEnter()">+</button>
+        <button id="incluir-nova-tarefa" onclick="criarNovaTarefa()" onkeydown="funcaoEnter(event)">+</button>
       </div>
-      <ul id="lista-tarefas">  
+      <ul id="lista-tarefas" onclick="clickMarcado(event.target)">  
       </ul>
 
       <div id="filtros">
